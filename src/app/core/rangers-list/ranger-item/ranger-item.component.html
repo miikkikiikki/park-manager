@@ -1,0 +1,11 @@
+<div class="right floated content">
+  <div class="ui button red" [class.loading]="isResetInProgress" (click)="resetTrees(rangerData)">report and erase</div>
+  <div class="ui button blue" [class.loading]="isCountingInProgress" (click)="countTrees(rangerData)">count tree's</div>
+</div>
+<img class="ui avatar image" src="{{rangerData.image}}">
+<div class="content">
+  {{rangerData.name}}
+  -
+  {{rangerData.count}} <span *ngIf="rangerData.count > 0">tree <span *ngIf="rangerData.count > 1">'s</span></span>
+</div>
+

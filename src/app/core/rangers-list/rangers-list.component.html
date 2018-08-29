@@ -1,0 +1,10 @@
+<div class="ui top attached segment" *ngIf="rangersList; else loader">
+  <div class="ui middle aligned divided list">
+    <app-ranger-item class="item" *ngFor="let ranger of rangersList" [rangerData]="ranger"></app-ranger-item>
+  </div>
+</div>
+<ng-template #loader>
+  <div class="ui active inverted dimmer" >
+    <div class="ui text loader">Loading</div>
+  </div>
+</ng-template>
